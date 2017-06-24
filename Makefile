@@ -25,3 +25,9 @@ deploy-full:
 migrate:
 	@python manage.py makemigrations
 	@python manage.py migrate
+
+startdev:
+	@git remote add stage https://git.heroku.com/ibiracicampeonato-stage.git
+	@git remote add prod https://git.heroku.com/ibiracicampeonato.git
+	@pip install -r requirements/development.txt
+	@make migrate
