@@ -1,1 +1,1 @@
-web: gunicorn lexci.wsgi
+web: gunicorn campeonato.wsgi
