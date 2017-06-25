@@ -1,6 +1,7 @@
 from django.db import models
 from .constants import TIPO_CAMPEONATO
 
+
 class Campeonato(models.Model):
     descricao = models.CharField(max_length=200)
     tipo_campeonato = models.CharField(max_length=1, choices=TIPO_CAMPEONATO, default="Q")
@@ -16,3 +17,15 @@ class Campeonato(models.Model):
 
     class Meta:
         db_table = 'campeonato'
+
+
+class Grupo(models.Model):
+    campeonato = models.ForeignKey(Campeonato, on_delete=models.CASCADE, related_name='grupo_campeonato')
+    descricao = models.CharField(max_length=100)
+    data_cadastro = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.descricao
+
+    class Meta:
+        db_table = 'grupo'
