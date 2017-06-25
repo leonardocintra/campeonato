@@ -1,4 +1,6 @@
 from django.db import models
+
+from clube.models import Clube
 from .constants import TIPO_CAMPEONATO
 
 
@@ -29,3 +31,15 @@ class Grupo(models.Model):
 
     class Meta:
         db_table = 'grupo'
+
+
+class GrupoClube(models.Model):
+    grupo = models.ForeignKey(Grupo, on_delete=models.CASCADE, related_name='grupoclube_grupo')
+    clube = models.ForeignKey(Clube, on_delete=models.CASCADE, related_name='grupoclube_clube')
+    data_cadastro = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '{} |  {} no {}'.format(self.grupo.campeonato.descricao, self.clube.nome, self.grupo.descricao) 
+
+    class Meta:
+        db_table = 'grupo_clube'
