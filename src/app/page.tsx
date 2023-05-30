@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   function handleJogosHoje() {
     return (
@@ -23,8 +21,10 @@ export default function Home() {
               Praça FC
             </h2>
             <p className="leading-relaxed text-base">
-              Williamsburg occupy sustainable snackwave gochujang. Pinterest
-              cornhole brunch, slow-carb neutra irony.
+              Com 12 títulos conquistados, somos a força dominante do futebol! O
+              time orgulhosamente veste as cores azul e amarelo, encantando os
+              torcedores com habilidade e paixão. Nossa história é marcada por
+              vitórias e nossa determinação nos levará à glória mais uma vez!
             </p>
             {/* <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">
               Ver detalhes do time
@@ -42,8 +42,9 @@ export default function Home() {
               Rana Modas
             </h2>
             <p className="leading-relaxed text-base">
-              Williamsburg occupy sustainable snackwave gochujang. Pinterest
-              cornhole brunch, slow-carb neutra irony.
+              Somos o novo time do campeonato! Com a garra de um urso, vestimos
+              as cores vermelha e branca para conquistar a vitória em cada
+              partida. Vamos rugir nos gramados e deixar nossa marca!
             </p>
             {/* <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">
               Ver detalhes do time
@@ -74,7 +75,7 @@ export default function Home() {
             </p>
           </div>
           {handleJogosHoje()}
-          <h2>Jogos anteriores jogos</h2>
+          <h2>Jogos anteriores</h2>
           <div className="flex flex-wrap -m-4">
             <div className="xl:w-1/4 md:w-1/2 p-4">
               <div className="bg-gray-100 p-6 rounded-lg">
@@ -153,7 +154,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h2>Proximos jogos</h2>
+          <h2 className="mt-3">Proximos jogos</h2>
           <div className="flex flex-wrap -m-4">
             <div className="xl:w-1/4 md:w-1/2 p-4">
               <div className="bg-gray-100 p-6 rounded-lg">

@@ -1,3 +1,5 @@
 export interface ICampeonato {
-  ano: number;
+  id: number;
+  nome: string;
+  data: Date;
 }
